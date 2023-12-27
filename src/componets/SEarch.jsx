@@ -25,7 +25,7 @@ function Search() {
   };
 
   return (
-    <div>
+    <div className="search-container">
       <h2>Search Pokemon</h2>
 
      
