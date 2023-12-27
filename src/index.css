@@ -5,27 +5,25 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   padding: 0;
   margin: 0;
   font-family: 'Press Start 2P', sans-serif;
-  background-color: #F7E39C;
+  background-color: #f7e39c;
 }
 
 .App {
-  height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 900px;
   margin: 0 auto;
-  border: 5px solid #3A5F90;
-  background-color: #F4F4F4;
-  overflow: scroll;
+  border: 5px solid #3a5f90;
+  background-color: #f4f4f4;
 }
 
 header {
-  background-color: #D13325;
+  background-color: #d13325;
   color: white;
   padding: 15px 0;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -47,15 +45,19 @@ nav a {
   color: white;
   padding: 5px 10px;
   border: none;
-  background-color: #3A5F90;
+  background-color: #3a5f90;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #2E4B74;
+  background-color: #2e4b74;
 }
-
+.search-container,
+.pokemon-container,
+.favorite-container {
+  min-height: 80vh;
+}
 .search-box {
   display: flex;
   gap: 10px;
@@ -66,12 +68,12 @@ nav a:hover {
   font-family: 'Press Start 2P', sans-serif;
   padding: 10px 4px;
   font-size: 10px;
-  border: 2px solid #DDD;
+  border: 2px solid #ddd;
   border-radius: 4px;
 }
 
 .search-box input:hover {
-  border: 2px solid #3A5F90;
+  border: 2px solid #3a5f90;
   outline: none;
 }
 
@@ -79,7 +81,7 @@ button {
   font-family: 'Press Start 2P', sans-serif;
   padding: 4px 8px;
   font-size: 10px;
-  background-color: #3A5F90;
+  background-color: #3a5f90;
   color: white;
   border: none;
   border-radius: 4px;
@@ -88,11 +90,11 @@ button {
 }
 
 button:hover {
-  background-color: #2E4B74;
+  background-color: #2e4b74;
 }
 
 .pokemon-card {
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -100,42 +102,49 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 20px;
 }
 
-.pokemon-card img {
-  max-width: 250px;
+.pokemon-img{
+  width: 150px;
   margin-bottom: 20px;
 }
-
 .pokedex ul {
   list-style-type: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   overflow-y: auto;
-  font-size: 10px;
-
+  font-size: 15px;
 }
 
 .pokedex li {
   padding: 10px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 4px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 200px;
+
 }
 
 .pokedex img {
-  max-width: 80px;
+  width: 120px;
   margin-bottom: 10px;
+  transition: transform 0.3 ease;
 }
-.link{
+.pokedex img:hover{
+  transform: scale(1.5);
+}
+.link {
   text-decoration: none;
-  color: #2E4B74;
-}
-.link:hover {
-  transform: scale(1.2); 
-  transition: transform 0.3s ease;
+  color: #2e4b74;
+ 
 }
 
+.favorite-btn{
+  padding: 8px;
+  font-size: 15px;
+  margin-top: 10px;
+}
